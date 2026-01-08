@@ -1,0 +1,9 @@
+Platzieren Sie hier Ihr Logo mit transparentem Hintergrund:
+- Dateiname: logo.png
+- Format: PNG mit transparentem Hintergrund
+- Verwendet in:
+  * Navigation (Header) - Höhe: 40px (automatisch skaliert)
+  * Hero-Section (Home) - Max-Breite: 600px (automatisch skaliert)
+
+Das Logo wird automatisch in beiden Bereichen verwendet.
+

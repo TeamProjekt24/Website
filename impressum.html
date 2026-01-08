@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Projekt 24</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+        
+        .impressum-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            min-height: 100vh;
+        }
+        
+        .impressum-title {
+            font-size: 2.5rem;
+            color: var(--primary-yellow);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .impressum-content {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 10px;
+            line-height: 1.8;
+            color: var(--light-text);
+        }
+        
+        .impressum-content h2 {
+            color: var(--primary-yellow);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .impressum-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .impressum-content h3 {
+            color: var(--primary-yellow);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .impressum-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .impressum-content ul {
+            margin-left: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .impressum-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .impressum-content strong {
+            color: var(--primary-yellow);
+        }
+        
+        .impressum-divider {
+            border-top: 2px solid var(--primary-yellow);
+            margin: 2.5rem 0;
+            opacity: 0.3;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-yellow);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: #ffed4e;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .impressum-container {
+                padding: 6rem 1.5rem 3rem;
+            }
+            
+            .impressum-title {
+                font-size: 2rem;
+            }
+            
+            .impressum-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                    <img src="assets/logo.png" alt="Projekt 24" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#news" class="nav-link">News</a></li>
+                <li><a href="index.html#about" class="nav-link">Das Projekt</a></li>
+                <li><a href="index.html#members" class="nav-link">Unser Team</a></li>
+                <li><a href="index.html#erfolge" class="nav-link">Erfolge</a></li>
+                <li><a href="index.html#partners" class="nav-link">Partner</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Galerie</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Impressum Content -->
+    <div class="impressum-container">
+        <h1 class="impressum-title">Impressum</h1>
+        <div class="impressum-content">
+           
+            <h3>Angaben gemäß § 5 TMG</h3>
+            <p>
+                <strong>Benedikt Hitz</strong><br>
+                Projekt 24<br>
+                Am Urbacher Wall 68<br>
+                51145 Köln<br>
+                Deutschland
+            </p>
+            
+            <h3>Kontakt</h3>
+            <p>
+                E-Mail: <a href="mailto:team.projekt24@outlook.de" style="color: var(--primary-yellow);">team.projekt24@outlook.de</a><br>
+                Telefon: <a href="tel:+491731604392" style="color: var(--primary-yellow);">+49 173 1604392</a>
+            </p>
+            
+            <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+            <p>
+                Benedikt Hitz<br>
+                Am Urbacher Wall 68<br>
+                51145 Köln
+            </p>
+            
+            <div class="impressum-divider"></div>
+            
+            <h2>Datenschutzerklärung</h2>
+            
+            <h3>Verantwortlicher</h3>
+            <p>Verantwortlich im Sinne der Datenschutzgesetze ist:</p>
+            <p>
+                <strong>Benedikt Hitz</strong><br>
+                Am Urbacher Wall 68<br>
+                51145 Köln<br>
+                Deutschland
+            </p>
+            <p>
+                E-Mail: <a href="mailto:team.projekt24@outlook.de" style="color: var(--primary-yellow);">team.projekt24@outlook.de</a>
+            </p>
+            
+            <h3>Allgemeine Hinweise</h3>
+            <p>
+                Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen.<br>
+                Wir verarbeiten personenbezogene Daten ausschließlich im Rahmen der gesetzlichen Bestimmungen der Datenschutz-Grundverordnung (DSGVO) und des Telekommunikation-Telemedien-Datenschutz-Gesetzes (TTDSG).
+            </p>
+            
+            <h3>Hosting der Website</h3>
+            <p>Diese Website wird bei folgendem Anbieter gehostet:</p>
+            <p>GitHub Pages</p>
+            <p>Beim Aufruf der Website werden durch den Hosting-Anbieter automatisch sogenannte Server-Logfiles erfasst:</p>
+            <ul>
+                <li>IP-Adresse</li>
+                <li>Datum und Uhrzeit des Zugriffs</li>
+                <li>aufgerufene Seite</li>
+                <li>Browsertyp und Betriebssystem</li>
+            </ul>
+            <p>
+                Die Verarbeitung erfolgt zur Sicherstellung des technischen Betriebs und zur Systemsicherheit.<br>
+                Eine Zusammenführung dieser Daten mit anderen Datenquellen findet nicht statt.
+            </p>
+            
+            <h3>Kontaktaufnahme per E-Mail</h3>
+            <p>
+                Wenn Sie uns per E-Mail kontaktieren, werden die übermittelten personenbezogenen Daten ausschließlich zur Bearbeitung der Anfrage verarbeitet und gespeichert.
+            </p>
+            <p>Eine Weitergabe dieser Daten erfolgt nicht ohne Ihre Einwilligung.</p>
+            
+            <h3>Cookies & Einwilligungsmanagement</h3>
+            <p>Diese Website verwendet Cookies.</p>
+            <p>
+                Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden.<br>
+                Einige Cookies sind technisch notwendig, andere dienen statistischen oder Marketingzwecken.
+            </p>
+            <p>
+                Beim ersten Besuch unserer Website wird Ihnen ein Cookie-Banner angezeigt, über das Sie:
+            </p>
+            <ul>
+                <li>Ihre Einwilligung erteilen oder</li>
+                <li>diese ablehnen oder</li>
+                <li>Ihre Einstellungen individuell festlegen können</li>
+            </ul>
+            <p>Ihre Auswahl können Sie jederzeit ändern oder widerrufen.</p>
+            
+            <h3>Google Analytics 4</h3>
+            <p>Diese Website nutzt Google Analytics 4, einen Webanalysedienst von:</p>
+            <p>
+                <strong>Google Ireland Limited</strong><br>
+                Gordon House<br>
+                Barrow Street<br>
+                Dublin 4<br>
+                Irland
+            </p>
+            <p>
+                Google Analytics verwendet Cookies, um das Nutzerverhalten auf der Website zu analysieren (z. B. Seitenaufrufe, Verweildauer, Herkunft).
+            </p>
+            <p>
+                <strong>Rechtsgrundlage:</strong><br>
+                Die Verarbeitung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+            </p>
+            <p>
+                <strong>IP-Anonymisierung:</strong><br>
+                Ihre IP-Adresse wird gekürzt verarbeitet.
+            </p>
+            <p>
+                <strong>Widerruf:</strong><br>
+                Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen.
+            </p>
+            
+            <h3>Einbindung von Instagram-Inhalten</h3>
+            <p>Auf dieser Website werden Inhalte des sozialen Netzwerks Instagram eingebunden.</p>
+            <p>
+                Beim Aufruf einer Seite mit eingebetteten Instagram-Inhalten kann Instagram personenbezogene Daten (z. B. IP-Adresse) erfassen.<br>
+                Wenn Sie in Ihrem Instagram-Account eingeloggt sind, kann der Besuch Ihrem Benutzerkonto zugeordnet werden.
+            </p>
+            
+            <h3>Speicherdauer</h3>
+            <p>
+                Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Erfüllung der jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+            </p>
+            
+            <h3>Ihre Rechte</h3>
+            <p>Sie haben jederzeit das Recht auf:</p>
+            <ul>
+                <li>Auskunft über Ihre gespeicherten Daten</li>
+                <li>Berichtigung unrichtiger Daten</li>
+                <li>Löschung Ihrer Daten</li>
+                <li>Einschränkung der Verarbeitung</li>
+                <li>Widerruf Ihrer Einwilligung</li>
+            </ul>
+            <p>Hierzu genügt eine formlose Mitteilung per E-Mail.</p>
+            
+            <h3>Änderung dieser Datenschutzerklärung</h3>
+            <p>
+                Diese Datenschutzerklärung wird angepasst, sobald sich technische Funktionen oder rechtliche Anforderungen ändern.
+            </p>
+        </div>
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Projekt 24. Alle Rechte vorbehalten. | <a href="impressum.html" class="footer-link">Impressum</a> | <a href="#" id="cookieSettingsLink" class="footer-link">Cookie-Einstellungen</a></p>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h3>Cookie-Einstellungen</h3>
+                <p>
+                    Wir verwenden Cookies, um unsere Website zu analysieren und zu verbessern. 
+                    Einige Cookies sind technisch notwendig, andere helfen uns, die Nutzung unserer Website zu verstehen. 
+                    Sie können Ihre Einwilligung jederzeit widerrufen.
+                </p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button id="cookieAcceptAll" class="cookie-btn cookie-btn-primary">Alle akzeptieren</button>
+                <button id="cookieRejectAll" class="cookie-btn cookie-btn-secondary">Alle ablehnen</button>
+                <button id="cookieSettings" class="cookie-btn cookie-btn-secondary">Einstellungen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieSettingsModal" class="cookie-settings-modal">
+        <div class="cookie-settings-content">
+            <div class="cookie-settings-header">
+                <h2>Cookie-Einstellungen</h2>
+                <button id="cookieSettingsClose" class="cookie-settings-close">&times;</button>
+            </div>
+            <div class="cookie-settings-body">
+                <p class="cookie-settings-intro">
+                    Wählen Sie aus, welche Cookies Sie zulassen möchten. Sie können Ihre Einstellungen jederzeit ändern.
+                </p>
+                
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <h3>Notwendige Cookies</h3>
+                        <label class="cookie-toggle">
+                            <input type="checkbox" id="cookieNecessary" checked disabled>
+                            <span class="cookie-toggle-slider"></span>
+                        </label>
+                    </div>
+                    <p class="cookie-category-description">
+                        Diese Cookies sind für die Grundfunktionen der Website erforderlich und können nicht deaktiviert werden.
+                    </p>
+                </div>
+
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <h3>Analytische Cookies</h3>
+                        <label class="cookie-toggle">
+                            <input type="checkbox" id="cookieAnalytics">
+                            <span class="cookie-toggle-slider"></span>
+                        </label>
+                    </div>
+                    <p class="cookie-category-description">
+                        Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden. 
+                        Wir verwenden Google Analytics 4 für diese Zwecke.
+                    </p>
+                </div>
+
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <h3>Marketing-Cookies</h3>
+                        <label class="cookie-toggle">
+                            <input type="checkbox" id="cookieMarketing">
+                            <span class="cookie-toggle-slider"></span>
+                        </label>
+                    </div>
+                    <p class="cookie-category-description">
+                        Diese Cookies werden verwendet, um Besuchern auf Websites relevante Anzeigen und Marketingkampagnen bereitzustellen.
+                    </p>
+                </div>
+            </div>
+            <div class="cookie-settings-footer">
+                <button id="cookieSaveSettings" class="cookie-btn cookie-btn-primary">Einstellungen speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Analytics 4 with Consent Mode -->
+    <!-- IMPORTANT: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+    <script>
+        // Initialize Google Consent Mode v2
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        // Set default consent state to 'denied' (DSGVO compliant)
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'wait_for_update': 500
+        });
+        
+        // GA4 Configuration - will be initialized after consent
+        window.GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA4 Measurement ID
+    </script>
+    
+    <script src="cookie-consent.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
