@@ -32,3 +32,12 @@ yarn-error.log*
 # Environment files
 .env
 .env.local
+
+# Assets folders structure:
+# assets/
+#   ├── about/          # Project video (project-video.mp4) - autoplays next to "Das ist Projekt 24" text
+#   ├── gallery/        # Gallery images (various sizes, no split between sim and real)
+#   ├── hero/           # Hero background images (hero1.jpg through hero5.jpg) - rotate every 10 seconds
+#   ├── members/        # Member pictures (member1.jpg, member2.jpg, member3.jpg)
+#   ├── partners/       # Partner logos (partner1.png, partner2.png, partner3.png) - clickable links
+#   └── logo.png        # Main logo file

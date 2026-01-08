@@ -1,4 +1,10 @@
-# Place 5 hero background images here
-# hero1.jpg, hero2.jpg, hero3.jpg, hero4.jpg, hero5.jpg
-# These will rotate every 10 seconds in the hero section
+# Hero Background Images
+# Place exactly 5 hero background images here with these exact names:
+#   hero1.jpg
+#   hero2.jpg
+#   hero3.jpg
+#   hero4.jpg
+#   hero5.jpg
+# These images will rotate automatically every 10 seconds in the hero section
+# The first image (hero1.jpg) is shown as active on page load
 

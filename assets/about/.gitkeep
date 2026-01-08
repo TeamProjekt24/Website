@@ -1,3 +1,6 @@
-# Place the project video here
-# project-video.mp4 - This will autoplay next to the "Das ist Projekt 24" text
+# Project Video
+# Place the project video here as: project-video.mp4
+# This video will autoplay (muted, loop) next to the "Das ist Projekt 24" text section
+# The video is clickable and opens a YouTube link when clicked
+# Supported format: MP4
 

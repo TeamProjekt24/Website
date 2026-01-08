@@ -24,48 +24,45 @@ Diese Anleitung erklärt, wie Sie Ihre bei Strato.de gekaufte Domain mit Ihrer G
 
 ## Schritt 3: DNS-Einstellungen bei Strato.de konfigurieren
 
-Loggen Sie sich in Ihr Strato-Kundencenter ein und gehen Sie zu den DNS-Einstellungen Ihrer Domain.
+**WICHTIG:** Strato's DNS-Interface erlaubt nur **einen einzigen A-Record** für die Root-Domain. Da GitHub Pages normalerweise 4 A-Records für Redundanz empfiehlt, gibt es zwei Optionen:
 
-### Option A: Domain mit www (z.B. www.projekt24.de)
+### Option A: www-Subdomain verwenden (EMPFOHLEN für Strato)
 
-Erstellen Sie folgende DNS-Einträge:
+Diese Option ist am einfachsten und zuverlässigsten mit Strato's Interface:
 
-1. **A-Record** (für die Root-Domain):
-   - Name: `@` oder leer lassen
-   - Typ: `A`
-   - Wert: `185.199.108.153`
-   - TTL: 3600 (oder Standard)
+1. **CNAME-Record für www-Subdomain erstellen:**
+   - Gehen Sie zu: **Domains** → **Domainverwaltung** → Wählen Sie Ihre Domain → **Zahnrad** → **DNS**
+   - Klicken Sie auf "**Subdomains anzeigen**" und erweitern Sie die Liste
+   - Klicken Sie auf die Subdomain "**www**" (falls nicht vorhanden, erstellen Sie sie zuerst)
+   - Öffnen Sie die **DNS-Verwaltung** und klicken Sie neben **CNAME-Record** auf **verwalten**
+   - Geben Sie ein: `teamprojekt24.github.io` (mit Punkt am Ende: `teamprojekt24.github.io.`)
+   - Setzen Sie das Häkchen beim Hinweistext
+   - Speichern Sie mit **Einstellungen übernehmen**
 
-2. **A-Record** (zusätzlich für GitHub Pages):
-   - Name: `@` oder leer lassen
-   - Typ: `A`
-   - Wert: `185.199.109.153`
-   - TTL: 3600
+2. **A-Record für Root-Domain (optional, für Weiterleitung):**
+   - Gehen Sie zurück zur Root-Domain DNS-Einstellungen
+   - Klicken Sie auf **A-Record verwalten**
+   - Setzen Sie auf **Eigene IP-Adresse**
+   - Tragen Sie eine der GitHub Pages IPs ein: `185.199.108.153`
+   - Speichern Sie mit **Einstellungen übernehmen**
 
-3. **A-Record** (dritter Eintrag):
-   - Name: `@` oder leer lassen
-   - Typ: `A`
-   - Wert: `185.199.110.153`
-   - TTL: 3600
+**Vorteil:** Einfach zu konfigurieren, funktioniert zuverlässig mit Strato's Interface.
 
-4. **A-Record** (vierter Eintrag):
-   - Name: `@` oder leer lassen
-   - Typ: `A`
-   - Wert: `185.199.111.153`
-   - TTL: 3600
+### Option B: Root-Domain ohne www (mit Einschränkungen)
 
-5. **CNAME-Record** (für www):
-   - Name: `www`
-   - Typ: `CNAME`
-   - Wert: `teamprojekt24.github.io`
-   - TTL: 3600
+Wenn Sie `projekt-24.org` (ohne www) verwenden möchten:
 
-### Option B: Domain ohne www (z.B. projekt24.de)
+1. **A-Record für Root-Domain:**
+   - Gehen Sie zu: **Domains** → **Domainverwaltung** → Wählen Sie Ihre Domain → **Zahnrad** → **DNS**
+   - Klicken Sie auf **A-Record verwalten**
+   - Setzen Sie auf **Eigene IP-Adresse**
+   - Tragen Sie eine GitHub Pages IP ein: `185.199.108.153`
+   - Speichern Sie mit **Einstellungen übernehmen**
 
-Erstellen Sie die gleichen 4 A-Records wie oben, aber **keinen** CNAME-Record für www.
+**Hinweis:** Strato erlaubt nur einen A-Record. GitHub empfiehlt zwar 4 A-Records für Redundanz, aber ein einzelner A-Record funktioniert in den meisten Fällen auch. Falls Probleme auftreten, sollten Sie Option A (www-Subdomain) verwenden.
 
 ### GitHub Pages IP-Adressen (Stand 2024):
-- `185.199.108.153`
+- `185.199.108.153` (empfohlen für Strato, da nur einer möglich)
 - `185.199.109.153`
 - `185.199.110.153`
 - `185.199.111.153`

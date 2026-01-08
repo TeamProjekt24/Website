@@ -1,3 +1,8 @@
-# Place partner logos here (partner1.png, partner2.png, etc.)
-# These will be clickable links to partner websites
+# Partner Logos
+# Place partner logos here with these exact names:
+#   partner1.png - ADAC (links to https://www.adac.de/)
+#   partner2.png - SX Consulting (links to https://www.sx-consulting.com/)
+#   partner3.png - Kubina Racing (links to https://www.kubina-racing.de/)
+# These logos are displayed as clickable links in the "Partner" section
+# Each logo links to the partner's website (opens in new tab)
 

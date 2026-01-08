@@ -1,3 +1,8 @@
-# Place all gallery images here (gallery1.jpg, gallery2.jpg, etc.)
-# No split between sim and real - all images together with varying sizes
+# Gallery Images
+# Place all gallery images here using the naming convention: image1, image2, image3, etc.
+# Supported formats: .jpg, .jpeg, .png (checked in that order)
+# Example: image1.jpg, image2.png, image3.jpeg, image4.JPEG, etc.
+# Images are loaded sequentially and the gallery stops after 3 consecutive missing images
+# All images are displayed together in a grid - no split between sim and real content
+# Images can be of varying sizes
 
