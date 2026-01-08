@@ -506,8 +506,21 @@ if (aboutVideo) {
     
     videoObserver.observe(aboutVideo);
     
-    // Make video clickable to open YouTube version
-    aboutVideo.addEventListener('click', () => {
+    // Make video and container clickable to open YouTube version
+    const videoContainer = document.querySelector('.about-video-container');
+    const openYouTube = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         window.open('https://www.youtube.com/watch?v=nEC0vSWMT7c', '_blank', 'noopener,noreferrer');
-    });
+    };
+    
+    aboutVideo.addEventListener('click', openYouTube);
+    // Prevent video controls from interfering
+    aboutVideo.controls = false;
+    aboutVideo.addEventListener('contextmenu', (e) => e.preventDefault());
+    
+    if (videoContainer) {
+        videoContainer.addEventListener('click', openYouTube);
+        videoContainer.style.cursor = 'pointer';
+    }
 }

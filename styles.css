@@ -352,6 +352,7 @@ html {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .about-video {
@@ -366,6 +367,10 @@ html {
 }
 
 .about-video:hover {
+    opacity: 0.9;
+}
+
+.about-video-container:hover .about-video {
     opacity: 0.9;
 }
 
