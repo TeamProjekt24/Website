@@ -505,4 +505,9 @@ if (aboutVideo) {
     }, { threshold: 0.5 });
     
     videoObserver.observe(aboutVideo);
+    
+    // Make video clickable to open YouTube version
+    aboutVideo.addEventListener('click', () => {
+        window.open('https://www.youtube.com/watch?v=nEC0vSWMT7c', '_blank', 'noopener,noreferrer');
+    });
 }
