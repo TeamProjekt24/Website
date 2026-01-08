@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Projekt 24 Website
 
 Website für das Projekt 24 - Nürburgring 24 Stunden Rennprogramm.
