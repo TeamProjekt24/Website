@@ -211,7 +211,7 @@ async function loadGalleryImages() {
         galleryContainer.innerHTML = loadedImages.map((url, index) => {
             return `
                 <div class="gallery-item">
-                    <img src="${url}" alt="Galerie Bild ${index + 1}" class="gallery-image">
+                    <img src="${url}" alt="Galerie Bild ${index + 1}" class="gallery-image" loading="lazy">
                 </div>
             `;
         }).join('');
@@ -448,12 +448,8 @@ videos.forEach(video => {
 
 // Add loading states for images
 document.querySelectorAll('.gallery-image, .partner-logo, .member-image').forEach(img => {
-    // Debug: log image source
-    console.log('Checking image:', img.src, 'Complete:', img.complete, 'Natural height:', img.naturalHeight);
-    
     // Check if image is already loaded
     if (img.complete && img.naturalHeight !== 0) {
-        console.log('Image already loaded, setting opacity to 1');
         img.style.opacity = '1';
         return; // Image already loaded, skip event listeners
     }
@@ -463,7 +459,6 @@ document.querySelectorAll('.gallery-image, .partner-logo, .member-image').forEac
     img.style.transition = 'opacity 0.3s ease';
     
     img.addEventListener('load', function() {
-        console.log('Image loaded:', this.src);
         this.style.opacity = '1';
     });
     
@@ -479,7 +474,6 @@ document.querySelectorAll('.gallery-image, .partner-logo, .member-image').forEac
     // Fallback: if image doesn't load within 2 seconds, make it visible anyway
     setTimeout(() => {
         if (img.style.opacity === '0' && img.complete) {
-            console.log('Fallback: Making image visible:', img.src);
             img.style.opacity = '1';
         }
     }, 2000);
@@ -489,8 +483,8 @@ document.querySelectorAll('.gallery-image, .partner-logo, .member-image').forEac
 const aboutVideo = document.querySelector('.about-video');
 if (aboutVideo) {
     // Try to play video when page loads
-    aboutVideo.play().catch(error => {
-        console.log('Autoplay prevented, will play on user interaction');
+    aboutVideo.play().catch(() => {
+        // Autoplay prevented, will play on user interaction
     });
     
     // Play on scroll into view
