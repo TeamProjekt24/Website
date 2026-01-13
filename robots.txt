@@ -1,0 +1,18 @@
+# robots.txt for projekt-24.org
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Allow access to CSS, JavaScript, and image files
+Allow: /assets/
+Allow: /styles.css
+Allow: /script.js
+Allow: /cookie-consent.js
+
+# Disallow any admin or private areas (if they exist in the future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.projekt-24.org/sitemap.xml
