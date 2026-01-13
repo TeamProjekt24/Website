@@ -113,6 +113,71 @@ Projekt24Website/
   - Instagram: https://instagram.com/projekt_24h
   - TikTok, Twitch, YouTube, LinkedIn
 
+## SEO-Wartung
+
+### Wichtige Dateien für die Suchmaschinenoptimierung
+
+Die Website verwendet mehrere Dateien für die Suchmaschinenoptimierung (SEO), die bei Änderungen aktualisiert werden müssen:
+
+#### `sitemap.xml`
+Die Sitemap hilft Suchmaschinen dabei, alle Seiten der Website zu finden und zu indexieren.
+
+**Wann aktualisieren:**
+- ✅ Wenn Sie neue Seiten hinzufügen (z.B. neue HTML-Dateien)
+- ✅ Wenn Sie bestehende Seiten erheblich ändern (z.B. `impressum.html` aktualisieren)
+- ✅ Wenn sich die URL-Struktur ändert
+- ✅ Regelmäßig (z.B. monatlich), um das `lastmod`-Datum aktuell zu halten
+
+**Was aktualisieren:**
+- `lastmod`: Datum im Format `YYYY-MM-DD` (z.B. `2026-01-20`)
+- `changefreq`: Wie oft sich die Seite ändert (`always`, `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `never`)
+- `priority`: Wichtigkeit der Seite (0.0 bis 1.0)
+
+**Beispiel:** Wenn Sie das Impressum aktualisieren:
+```xml
+<url>
+    <loc>https://www.projekt-24.org/impressum.html</loc>
+    <lastmod>2026-01-25</lastmod>  <!-- Aktuelles Datum setzen -->
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+</url>
+```
+
+#### `robots.txt`
+Die robots.txt-Datei gibt Suchmaschinen Anweisungen, welche Bereiche der Website gecrawlt werden sollen.
+
+**Wann aktualisieren:**
+- ✅ Wenn Sie neue Verzeichnisse hinzufügen, die nicht indexiert werden sollen
+- ✅ Wenn sich die Sitemap-URL ändert
+- ⚠️ Normalerweise selten notwendig
+
+#### `index.html` - Meta-Tags und Structured Data
+Die HTML-Datei enthält wichtige SEO-Elemente im `<head>`-Bereich.
+
+**Wann aktualisieren:**
+- ✅ Wenn sich der Titel oder die Beschreibung der Website ändert
+- ✅ Wenn sich Team-Mitglieder oder Erfolge ändern (Structured Data aktualisieren)
+- ✅ Wenn sich Social Media Accounts ändern
+- ✅ Wenn sich Partner ändern
+
+**Wichtige Bereiche:**
+- Meta-Tags (`<meta name="description">`, etc.)
+- Open Graph Tags (für Social Media)
+- Twitter Card Tags
+- Schema.org Structured Data (SportsTeam, Organization, WebSite, BreadcrumbList)
+
+**Tipp:** Verwenden Sie die [Google Rich Results Test](https://search.google.com/test/rich-results) Tool, um Ihre Structured Data zu validieren.
+
+### Checkliste nach größeren Änderungen
+
+Nach größeren Änderungen an der Website sollten Sie:
+
+1. ✅ `sitemap.xml` aktualisieren (Datum und ggf. neue URLs)
+2. ✅ Structured Data in `index.html` prüfen und aktualisieren
+3. ✅ Meta-Beschreibungen prüfen
+4. ✅ In Google Search Console die Sitemap erneut einreichen (falls nötig)
+5. ✅ Mit dem [Google Rich Results Test](https://search.google.com/test/rich-results) testen
+
 ## Deployment
 
 ### GitHub Pages
