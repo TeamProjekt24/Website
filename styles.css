@@ -105,6 +105,11 @@ html {
     width: 100%;
 }
 
+.nav-link.lang-switcher {
+    margin-left: 0.5rem;
+    opacity: 0.9;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;

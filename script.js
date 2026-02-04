@@ -1,3 +1,31 @@
+// Language and asset base for bilingual pages (en/ uses data-assets-base="../")
+const LANG = (document.documentElement.getAttribute('lang') || 'de').startsWith('en') ? 'en' : 'de';
+const ASSETS_BASE = document.documentElement.getAttribute('data-assets-base') || '';
+
+const I18N = {
+    de: {
+        instagramConfigure: 'Instagram Posts konfigurieren',
+        instagramInstructions: 'Bitte fügen Sie Instagram Post URLs in script.js hinzu.<br>Siehe INSTAGRAM_SETUP.md für Anweisungen.',
+        instagramVisit: 'Besuchen Sie uns auf Instagram',
+        instagramLoadError: 'Instagram Feed konnte nicht geladen werden',
+        instagramErrorOccurred: 'Ein Fehler ist aufgetreten.',
+        galleryNoImages: 'Keine Bilder in der Galerie gefunden.',
+        galleryImageUnavailable: 'Bild nicht verfügbar',
+        galleryImageAlt: 'Galerie Bild'
+    },
+    en: {
+        instagramConfigure: 'Configure Instagram posts',
+        instagramInstructions: 'Please add Instagram post URLs in script.js.<br>See INSTAGRAM_SETUP.md for instructions.',
+        instagramVisit: 'Visit us on Instagram',
+        instagramLoadError: 'Instagram feed could not be loaded',
+        instagramErrorOccurred: 'An error occurred.',
+        galleryNoImages: 'No images found in the gallery.',
+        galleryImageUnavailable: 'Image not available',
+        galleryImageAlt: 'Gallery image'
+    }
+};
+const t = I18N[LANG] || I18N.de;
+
 // Mobile Navigation Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
@@ -70,14 +98,13 @@ async function loadInstagramFeed() {
     if (instagramPostUrls.length === 0 || instagramPostUrls.every(url => !url || url.trim() === '')) {
         feedContainer.innerHTML = `
             <div class="instagram-placeholder">
-                <p>Instagram Posts konfigurieren</p>
+                <p>${t.instagramConfigure}</p>
                 <p style="font-size: 0.9rem; margin-top: 1rem; color: #999;">
-                    Bitte fügen Sie Instagram Post URLs in script.js hinzu.<br>
-                    Siehe INSTAGRAM_SETUP.md für Anweisungen.
+                    ${t.instagramInstructions}
                 </p>
                 <a href="https://www.instagram.com/${username}/" target="_blank" rel="noopener noreferrer" 
                    style="color: var(--primary-yellow); text-decoration: none; margin-top: 1rem; display: inline-block;">
-                    Besuchen Sie uns auf Instagram
+                    ${t.instagramVisit}
                 </a>
             </div>
         `;
@@ -148,13 +175,13 @@ async function loadInstagramFeed() {
         console.error('Error loading Instagram feed:', error);
         feedContainer.innerHTML = `
             <div class="instagram-placeholder">
-                <p>Instagram Feed konnte nicht geladen werden</p>
+                <p>${t.instagramLoadError}</p>
                 <p style="font-size: 0.9rem; margin-top: 1rem; color: #999;">
-                    ${error.message || 'Ein Fehler ist aufgetreten.'}
+                    ${error.message || t.instagramErrorOccurred}
                 </p>
                 <a href="https://www.instagram.com/${username}/" target="_blank" rel="noopener noreferrer" 
                    style="color: var(--primary-yellow); text-decoration: none; margin-top: 1rem; display: inline-block;">
-                    Besuchen Sie uns auf Instagram
+                    ${t.instagramVisit}
                 </a>
             </div>
         `;
@@ -188,7 +215,7 @@ async function loadGalleryImages() {
     for (let i = 1; i <= maxImages; i++) {
         let found = false;
         for (const ext of imageExtensions) {
-            const url = `assets/gallery/image${i}.${ext}`;
+            const url = `${ASSETS_BASE}assets/gallery/image${i}.${ext}`;
             const exists = await checkImageExists(url);
             if (exists) {
                 loadedImages.push(url);
@@ -211,7 +238,7 @@ async function loadGalleryImages() {
         galleryContainer.innerHTML = loadedImages.map((url, index) => {
             return `
                 <div class="gallery-item">
-                    <img src="${url}" alt="Galerie Bild ${index + 1}" class="gallery-image" loading="lazy">
+                    <img src="${url}" alt="${t.galleryImageAlt} ${index + 1}" class="gallery-image" loading="lazy">
                 </div>
             `;
         }).join('');
@@ -219,7 +246,7 @@ async function loadGalleryImages() {
         // Initialize gallery click handlers
         initializeGalleryModal();
     } else {
-        galleryContainer.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">Keine Bilder in der Galerie gefunden.</p>';
+        galleryContainer.innerHTML = `<p style="color: #666; text-align: center; padding: 2rem;">${t.galleryNoImages}</p>`;
     }
 }
 
@@ -467,7 +494,7 @@ document.querySelectorAll('.gallery-image, .partner-logo, .member-image').forEac
         this.style.display = 'none';
         const parent = this.parentElement;
         if (parent && !parent.classList.contains('instagram-post')) {
-            parent.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">Bild nicht verfügbar</p>';
+            parent.innerHTML = `<p style="color: #666; text-align: center; padding: 2rem;">${t.galleryImageUnavailable}</p>`;
         }
     });
     

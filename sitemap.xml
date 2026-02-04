@@ -4,18 +4,34 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
-    <!-- Homepage -->
+    <!-- Homepage (German) -->
     <url>
         <loc>https://www.projekt-24.org/</loc>
-        <lastmod>2026-01-20</lastmod>
+        <lastmod>2026-02-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
-    <!-- Impressum -->
+    <!-- Homepage (English) -->
+    <url>
+        <loc>https://www.projekt-24.org/en/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Impressum (German) -->
     <url>
         <loc>https://www.projekt-24.org/impressum.html</loc>
-        <lastmod>2026-01-20</lastmod>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Imprint (English) -->
+    <url>
+        <loc>https://www.projekt-24.org/en/impressum.html</loc>
+        <lastmod>2026-02-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
