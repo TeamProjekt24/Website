@@ -28,11 +28,14 @@ Projekt24Website/
     │   ├── gallery2.jpg
     │   ├── gallery3.jpg
     │   └── ...
-    └── partners/       # Partner-Logos (klickbar)
-        ├── partner1.png
-        ├── partner2.png
-        ├── partner3.png
-        └── ...
+    ├── partners/       # Partner-Logos (klickbar)
+    │   ├── partner1.png
+    │   ├── partner2.png
+    │   ├── partner3.png
+    │   └── ...
+    └── downloads/      # Sponsorenmappe / Sponsorship Portfolio (PDF)
+        ├── projekt24-sponsorship-de.pdf
+        └── projekt24-sponsorship-en.pdf
 ```
 
 ## Website-Sektionen
@@ -65,6 +68,10 @@ Projekt24Website/
 - Partner-Logos als klickbare Links zu deren Websites
 - Ersetzt die alte "Sponsoren"-Sektion
 
+### Sponsorenmappe / Sponsorship Portfolio
+- Download-Links für die Sponsorenmappe als PDF (Deutsch und Englisch)
+- Zwischen Partner und Galerie
+
 ### Galerie
 - Alle Bilder zusammen (keine Aufteilung Simulation/Real)
 - Verschiedene Bildgrößen in einem Masonry-Layout
@@ -95,6 +102,11 @@ Projekt24Website/
 ### Partner
 - Fügen Sie Partner-Logos in `assets/partners/` ein
 - Aktualisieren Sie die Links in `index.html` (href-Attribute der .partner-item Elemente)
+
+### Sponsorenmappe / PDF-Downloads
+- **Speicherort:** Die PDF-Dateien liegen in `assets/downloads/`.
+- **Aktualisieren:** Ersetzen Sie die bestehenden PDF-Dateien durch neue Versionen und **behalten Sie die gleichen Dateinamen** bei (`projekt24-sponsorship-de.pdf`, `projekt24-sponsorship-en.pdf`). Dann funktionieren die Links in `index.html` und `en/index.html` weiter ohne Änderungen.
+- **Falls Sie andere Dateinamen verwenden:** Passen Sie die `href`-Attribute der beiden Download-Links in `index.html` (Pfad `assets/downloads/...`) und in `en/index.html` (Pfad `../assets/downloads/...`) an.
 
 ### Galerie
 - Fügen Sie alle Galerie-Bilder in `assets/gallery/` ein (gallery1.jpg, gallery2.jpg, etc.)
