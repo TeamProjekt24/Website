@@ -635,6 +635,19 @@ html {
     transform: translateY(-3px);
 }
 
+/* Contact section on dark background: light text and visible buttons */
+.section-dark .social-link {
+    color: var(--light-text);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.section-dark .social-link:hover {
+    border-color: var(--primary-yellow);
+    background-color: rgba(255, 215, 0, 0.15);
+    color: var(--light-text);
+}
+
 .social-icon {
     width: 24px;
     height: 24px;
